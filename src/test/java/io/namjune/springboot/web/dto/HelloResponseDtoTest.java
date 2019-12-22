@@ -1,14 +1,13 @@
 package io.namjune.springboot.web.dto;
 
-
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class HelloResponseDtoTest {
+public class HelloResponseDtoTest {
 
     @Test
-    void 롬복_기능_테스트() {
+    public void 롬복_기능_테스트() {
         //given
         String name = "test";
         int amount = 10000;

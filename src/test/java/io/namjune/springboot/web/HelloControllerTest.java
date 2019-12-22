@@ -1,11 +1,10 @@
 package io.namjune.springboot.web;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
@@ -15,17 +14,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
-@ExtendWith(SpringExtension.class)
+@RunWith(SpringRunner.class)
 @WebMvcTest
-class HelloControllerTest {
+public class HelloControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    @DisplayName("hello 반환")
-    void returnHello() throws Exception {
+    public void returnHello() throws Exception {
         String hello = "hello";
 
         mockMvc.perform(get("/hello"))
@@ -35,8 +32,7 @@ class HelloControllerTest {
     }
 
     @Test
-    @DisplayName("helloDto 반환")
-    void returnHelloDto() throws Exception {
+    public void returnHelloDto() throws Exception {
         String name = "hello";
         int amount = 10000;
 
