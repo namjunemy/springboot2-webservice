@@ -5,6 +5,9 @@ build/
 !**/src/main/**
 !**/src/test/**
 
+### Personal ###
+application-oauth.yml
+
 ### STS ###
 .apt_generated
 .classpath
