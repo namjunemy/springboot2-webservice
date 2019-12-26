@@ -30,7 +30,7 @@ public class PostsApiController {
     }
 
     @PutMapping("/api/v1/posts/{id}")
-    public Long updqte(@PathVariable Long id, @RequestBody PostsSaveRequestDto requestDto) {
+    public Long update(@PathVariable Long id, @RequestBody PostsSaveRequestDto requestDto) {
         return postsService.update(id, requestDto);
     }
 
