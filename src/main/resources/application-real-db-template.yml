@@ -1,0 +1,10 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    url: jdbc:mariadb://rds주소:포트명(기본은 3306)/database명
+    username: db계정
+    password: db계정 비밀번호
+    driver-class-name: org.mariadb.jdbc.Driver
