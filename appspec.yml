@@ -14,5 +14,5 @@ permissions:
 hooks:
   ApplicationStart:
     - location: deploy-auto.sh
-      timeouoot: 60
+      timeouoot: 120
       runas: ec2-user
