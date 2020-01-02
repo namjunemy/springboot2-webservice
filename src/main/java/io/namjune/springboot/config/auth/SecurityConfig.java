@@ -23,8 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 // url별 권한 관리 설정 옵션의 시작점
                 .authorizeRequests()
-                // root와 static은 모두에게
-                .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
+                // root와 static은 모두에게, profile 조회 API
+                .antMatchers("/", "/profile", "/css/**", "/images/**", "/js/**", "/h2-console/**").permitAll()
                 // api v1은 USER Role 가진 사용자에게만
                 .antMatchers("/api/v1/**").hasRole(Role.USER.name())
                 // 그 외는 로그인 사용자에게만
