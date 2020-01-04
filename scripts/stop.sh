@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ABSDIR=$(dirname $ABSPATH)
 
 source ${ABSDIR}/profile.sh
