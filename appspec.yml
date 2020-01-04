@@ -18,7 +18,7 @@ hooks:
       runas: ec2-user
   ApplicationStart:
     - location: start.sh #엔진엑스와 연결되어 있지 않은 port로 새 버전의 스프링 부트를 시작한다
-      timeouoot: 120
+      timeout: 120
       runas: ec2-user
   ValidateService:
     - location: health.sh #새 스프링 부트가 정상적으로 실행됐는지 확인한다
